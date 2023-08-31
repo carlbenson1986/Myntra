@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import m1 from "./../../../public/img/cards/k (22).jpg";
-import m2 from "./../../../public/img/cards/k (21).jpg";
-import k from "./../../images/m2.jpg";
+import m1 from "./../../../public/img/cards/k22.jpg";
+import m2 from "./../../../public/img/cards/k21.jpg";
 import m28 from "./../../../public/img/cards/k (20).jpg";
 import m3 from "./../../../public/img/cards/k (19).jpg";
 import m38 from "./../../../public/img/cards/k (18).jpg";
@@ -17,8 +16,8 @@ import m11 from "./../../../public/img/cards/k (10).jpg";
 import m12 from "./../../../public/img/cards/k (9).jpg";
 import m13 from "./../../../public/img/cards/k (8).jpg";
 import m14 from "./../../../public/img/cards/k (6).jpg";
-import m15 from "./../../../public/img/cards/k (5).jpg";
-import m16 from "./../../../public/img/cards/k (4).jpg";
+import m15 from "./../../../public/img/cards/k5.jpg";
+import m16 from "./../../../public/img/cards/k4.jpg";
 
 function Cards() {
   return (
@@ -34,11 +33,11 @@ function Cards() {
 
       <div className="my-7">
         <div className="flex flex-row mx-16">
-          <Image className="basis-1/5 w-5 " src={k} alt="m" />
-          <Image className="basis-1/5 w-5 " src={k} alt="m" />
-          <Image className="basis-1/5 w-5 " src={k} alt="m" />
-          <Image className="basis-1/5 w-5 " src={k} alt="m" />
-          <Image className="basis-1/5 w-5 " src={k} alt="m" />
+          <Image className="basis-1/5 w-5 " src={m1} alt="m" />
+          <Image className="basis-1/5 w-5 " src={m2} alt="m" />
+          <Image className="basis-1/5 w-5 " src={m28} alt="m" />
+          <Image className="basis-1/5 w-5 " src={m3} alt="m" />
+          <Image className="basis-1/5 w-5 " src={m38} alt="m" />
           <Image className="basis-1/5 w-5 " src={m4} alt="m" />
         </div>
         <div className="flex flex-row mx-16">
