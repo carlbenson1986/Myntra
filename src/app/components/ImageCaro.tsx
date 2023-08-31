@@ -12,6 +12,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image';
 
 const ImageCaro = () => {
+  
   return (
     <Carousel showThumbs={false} showArrows={false}   showStatus={false} autoPlay infiniteLoop className='relative md:mt-[7rem]'>
       <div>
