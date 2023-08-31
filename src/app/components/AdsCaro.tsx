@@ -21,8 +21,9 @@ import r15 from "./../../images/medal worthy/d6529cc8-ff03-4d85-88b7-5358a1d5a46
 import r16 from "./../../images/medal worthy/dc79e7c8-af20-4b65-ae2f-da2ca8e8c3f31691134139774-image_png1749927309.png";
 import r17 from "./../../images/medal worthy/eb385972-caf6-4e84-a37c-3fc2b4ac52041691079093062-image_png892897249.png";
 import Image from "next/image";
+import { log } from "console";
 
-function AdsCaro(props) {
+function AdsCaro(props:any) {
   const settings = {
     dots: true,
 
@@ -31,6 +32,7 @@ function AdsCaro(props) {
     slidesToShow: 6,
     slidesToScroll: 6,
   };
+  
   return (
     <div>
       <h1 className="uppercase text-zinc-700	mt-20 mb-20 ml-7 text-3xl  tracking-wider  font-semibold ">

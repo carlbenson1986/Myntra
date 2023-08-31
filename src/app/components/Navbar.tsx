@@ -1,6 +1,6 @@
 export default function Navbar() {
     return (
-      <nav className="bg-white top-0  left-0 right-0 fixed  p-4 flex justify-between items-center drop-shadow-md">
+      <nav className="bg-white top-0  left-0 right-0 fixed z-50 p-4 flex justify-between items-center drop-shadow-md">
         {/* Logo */}
         <div className="flex items-center ">
           <img

@@ -76,11 +76,12 @@ const Footer = () => {
 
 export default function Home() {
   // const router = useRouter();
+  const  h= "medal worthy brands to bag";
   return (
     <>
       <Navbar />
       <ImageCaro />
-      <AdsCaro heading=" medal worthy brands to bag" />
+      <AdsCaro heading={h}/>
       <AdsSlider/>
       <Cards/>
       <Footer />
