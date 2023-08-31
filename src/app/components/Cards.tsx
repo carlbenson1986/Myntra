@@ -7,7 +7,7 @@ import m3 from "./../../../public/img/cards/k19.jpg";
 import m38 from "./../../../public/img/cards/k18.jpg";
 import m4 from "./../../../public/img/cards/k17.jpg";
 import m5 from "./../../../public/img/cards/k16.jpg";
-import m6 from "./../../../public/img/cards/k16.jpg";
+import m6 from "./../../../public/img/cards/k15.jpg";
 import m7 from "./../../../public/img/cards/k14.jpg";
 import m8 from "./../../../public/img/cards/k13.jpg";
 import m9 from "./../../../public/img/cards/k12.jpg";
@@ -32,15 +32,15 @@ function Cards() {
       </h1>
 
       <div className="my-7">
-        <div className="flex flex-row mx-16">
+        <div className="flex flex-row mx-14">
           <Image className="basis-1/5 w-5 " src={m1} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m2} alt="m" />
+          <Image className="basis-1/5  w-5 " src={m2} alt="m" />
           <Image className="basis-1/5 w-5 " src={m28} alt="m" />
           <Image className="basis-1/5 w-5 " src={m3} alt="m" />
           <Image className="basis-1/5 w-5 " src={m38} alt="m" />
           <Image className="basis-1/5 w-5 " src={m4} alt="m" />
         </div>
-        <div className="flex flex-row mx-16">
+        <div className="flex flex-row mx-14">
           <Image className="basis-1/5 w-5 " src={m5} alt="m" />
           <Image className="basis-1/5 w-5 " src={m6} alt="m" />
           <Image className="basis-1/5 w-5 " src={m7} alt="m" />
@@ -48,7 +48,7 @@ function Cards() {
           <Image className="basis-1/5 w-5 " src={m9} alt="m" />
           <Image className="basis-1/5 w-5 " src={m10} alt="m" />
         </div>
-        <div className="flex flex-row mx-16">
+        <div className="flex flex-row mx-14">
           <Image className="basis-1/5 w-5 "  src={m11} alt="m" />
           <Image className="basis-1/5 w-5 " src={m12} alt="m" />
           <Image className="basis-1/5 w-5 " src={m13} alt="m" />
