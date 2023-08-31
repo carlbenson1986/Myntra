@@ -30,7 +30,7 @@ function Cards() {
        className="uppercase
         text-zinc-700	mt-16 ml-12
          text-3xl mb-12 tracking-widest
-         	text-base  font-bold ">
+         	  font-bold ">
 
         shop by category
       </h1>

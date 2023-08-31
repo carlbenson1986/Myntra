@@ -4,19 +4,10 @@ import { useRouter } from "next/navigation";
 import ImageCaro from "./components/ImageCaro";
 import Navbar from "./components/Navbar";
 import Cards from "./components/Cards";
+import AdsSlider from "./components/AdsSlider";
+import AdsCaro from "./components/AdsCaro";
 
-const AdsCaro = (props) => {
-  console.log(props);
 
-  return (
-    <div>
-      <h1 className="uppercase text-zinc-700	my-16 ml-7 text-2xl mb-4 tracking-widest	text-base  font-bold ">
-        {props.heading}
-      </h1>
-      <div>carousel</div>
-    </div>
-  );
-};
 
 const Footer = () => {
   return (
@@ -85,13 +76,12 @@ const Footer = () => {
 
 export default function Home() {
   // const router = useRouter();
-  const s = " medal worthy brands to bag";
   return (
     <>
       <Navbar />
       <ImageCaro />
-      <AdsCaro heading={s} />
-      <AdsCaro heading="RAKSHABANNDHAN GIFTS THIS WAY" />
+      <AdsCaro heading=" medal worthy brands to bag" />
+      <AdsSlider/>
       <Cards/>
       <Footer />
     </>
