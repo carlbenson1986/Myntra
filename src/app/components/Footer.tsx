@@ -1,3 +1,5 @@
+import { AiFillFacebook,AiOutlineTwitter,AiFillInstagram,AiFillYoutube,
+  } from "react-icons/ai";
 export  const Footer = () => {
   return (
     < >
@@ -45,6 +47,13 @@ export  const Footer = () => {
           </h3>
 
           <h3 className="text-sm font-semibold uppercase p-1">Keep in Touch</h3>
+          <div className="flex text-3xl text-stone-500 py-1">
+
+          <AiFillFacebook />
+          <AiOutlineTwitter/>
+          <AiFillInstagram/>
+          <AiFillYoutube/>
+          </div>
         </div>
 
         <div className="pl-14 max-sm:hidden ">

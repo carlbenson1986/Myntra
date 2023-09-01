@@ -1,3 +1,13 @@
+import { BsBag } from "react-icons/bs";
+import {
+  AiOutlineHeart,
+  AiOutlineUser,
+  AiFillFacebook,
+  AiOutlineTwitter,
+  AiFillInstagram,
+  AiFillYoutube,
+  AiOutlineSearch,
+} from "react-icons/ai";
 export default function Navbar() {
   return (
     <nav
@@ -17,17 +27,26 @@ export default function Navbar() {
         {/* Menu Items */}
         <ul className="flex md:space-x-6 max-sm:space-x-2">
           <li>
-            <a href="/shop" className="font-semibold md:text-sm  max-sm:text-xs">
+            <a
+              href="/shop"
+              className="font-semibold md:text-sm  max-sm:text-xs"
+            >
               MEN
             </a>
           </li>
           <li>
-            <a href="/shop" className="font-semibold md:text-sm   max-sm:text-xs">
+            <a
+              href="/shop"
+              className="font-semibold md:text-sm   max-sm:text-xs"
+            >
               WOMEN
             </a>
           </li>
           <li>
-            <a href="/shop" className="font-semibold md:text-sm   max-sm:text-xs">
+            <a
+              href="/shop"
+              className="font-semibold md:text-sm   max-sm:text-xs"
+            >
               KIDS
             </a>
           </li>
@@ -37,7 +56,10 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="/shop" className="font-semibold  max-sm:text-xs md:text-sm">
+            <a
+              href="/shop"
+              className="font-semibold  max-sm:text-xs md:text-sm"
+            >
               BEAUTY
             </a>
           </li>
@@ -49,19 +71,34 @@ export default function Navbar() {
         </ul>
       </div>
       {/* Search Bar and Cart */}
-      <div className="flex items-center max-sm:hidden space-x-10">
-        <input
-          type="text"
-          placeholder="Search for products,brands and more"
-          className="px-4 py-2 bg-slate-100  focus:outline-none w-80 text-sm focus:border-gray-400"
-        />
-        <a href="#" className="text-xs">
+      <div className="flex items-center max-sm:hidden space-x-8">
+        <div className="flex">
+          <div className="bg-slate-100 text-center pt-2 pl-2 text-lg text-stone-600 ">
+            <AiOutlineSearch />
+          </div>
+          <input
+            className="px-4 py-2 bg-slate-100  focus:outline-none w-80 text-sm focus:border-gray-400"
+            type="text"
+            placeholder="Search for products,brands and more"
+          />
+        </div>
+
+        <a href="#" className="text-xs ">
+          <div className="text-center text-stone-600 pl-2 text-xl ">
+            <AiOutlineUser />
+          </div>
           <span>Profile</span>
         </a>
         <a href="#" className="text-xs ">
+          <div className="text-center text-stone-600 pl-2 text-xl ">
+            <AiOutlineHeart />
+          </div>
           <span>WishList</span>
         </a>
         <a href="#" className=" text-xs">
+          <div className="text-center text-stone-600 text-xl ">
+            <BsBag />
+          </div>
           <span>Bag</span>
         </a>
       </div>
