@@ -11,6 +11,7 @@ import m8 from "./../../images/m6.jpg";
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image';
 
+
 const ImageCaro = () => {
   
   return (

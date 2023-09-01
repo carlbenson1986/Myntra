@@ -5,7 +5,10 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MYNTRA',
+  icons:{
+    icon:"https://ww1.freelogovectors.net/wp-content/uploads/2023/01/myntra-logo-freelogovectors.net_.png"
+  },
+  title: 'Myntra',
   description: 'CAPSTONE PROJECT ',
 }
 
