@@ -14,7 +14,8 @@ import Image from 'next/image';
 const ImageCaro = () => {
   
   return (
-    <Carousel showThumbs={false} showArrows={false}   showStatus={false} autoPlay infiniteLoop className='relative md:mt-[7rem]'>
+    <Carousel showThumbs={false} showArrows={false}   showStatus={false}
+     autoPlay infiniteLoop className='relative md:mt-[7rem] max-sm:mt-[6rem]'>
       <div>
        <Image src={m1} alt='handbags'/>
       </div>

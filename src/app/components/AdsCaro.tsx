@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,24 +21,49 @@ import r15 from "./../../images/medal worthy/d6529cc8-ff03-4d85-88b7-5358a1d5a46
 import r16 from "./../../images/medal worthy/dc79e7c8-af20-4b65-ae2f-da2ca8e8c3f31691134139774-image_png1749927309.png";
 import r17 from "./../../images/medal worthy/eb385972-caf6-4e84-a37c-3fc2b4ac52041691079093062-image_png892897249.png";
 import Image from "next/image";
-import { log } from "console";
 
 function AdsCaro(props:any) {
+  const [slidesToShow,setSlidesToShow] = useState(6);
+  const [slidesToScroll,setSlidesToScroll] = useState(6);
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      setSlidesToShow(window.innerWidth < 768 ? 3 : 6)
+       setSlidesToScroll(window.innerWidth < 768 ? 3 : 6)
+      
+      // Use the slidesToShow and slidesToScroll values as needed
+      // (e.g., update state or any other logic)
+    };
+
+    // Call the function initially
+    updateWindowDimensions();
+
+    // Attach the function to the "resize" event to update on window size changes
+    window.addEventListener('resize', updateWindowDimensions);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', updateWindowDimensions);
+    };
+  }, []);
+
   const settings = {
     dots: true,
-
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 6,
+    slidesToShow: slidesToShow, // Use the value from state or update as needed
+    slidesToScroll: slidesToScroll, // Use the value from state or update as needed
   };
+
   
   return (
-    <div>
-      <h1 className="uppercase text-zinc-700	mt-20 mb-20 ml-7 text-3xl  tracking-wider  font-semibold ">
+    <div className="md:w-[82.7rem] max-sm:w-11/12">
+      <h1 className="uppercase text-zinc-700	mt-20 mb-20 ml-0
+      max-sm:mt-12 max-sm:mb-10 max-sm:mr-12 max-sm:ml-3 
+      md:text-3xl max-sm:text-xl  tracking-wider  font-semibold ">
         {props.heading}
       </h1>
-      <Slider {...settings} autoplay={true}>
+      <Slider className="max-sm:m-3" {...settings} autoplay={true}>
         <Image src={r0} alt="d" />
         <Image src={r1} alt="d" />
         <Image src={r2} alt="d" />

@@ -24,37 +24,37 @@ function Cards() {
     <div>
       <h1
         className="uppercase
-        text-zinc-700	mt-16 ml-12
-         text-3xl mb-12 tracking-widest
+        text-zinc-700	sm:mt-16 sm:ml-12 mt-10 ml-5
+        text-2xl sm:text-3xl sm:mb-12 tracking-widest
          	  font-bold "
       >
         shop by category
       </h1>
 
       <div className="my-7">
-        <div className="flex flex-row mx-14">
-          <Image className="basis-1/5 w-5 " src={m1} alt="m" />
-          <Image className="basis-1/5  w-5 " src={m2} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m28} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m3} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m38} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m4} alt="m" />
+        <div className="flex flex-row md:mx-14 mx-2">
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m1} alt="m" />
+          <Image className="md:basis-1/5  md:w-5 w-3 basis-1/2 " src={m2} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m28} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m3} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3 max-sm:hidden  basis-1/2" src={m38} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3 max-sm:hidden basis-1/2" src={m4} alt="m" />
         </div>
-        <div className="flex flex-row mx-14">
-          <Image className="basis-1/5 w-5 " src={m5} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m6} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m7} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m8} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m9} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m10} alt="m" />
+        <div className="flex flex-row md:mx-14 mx-2">
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m5} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m6} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m7} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m8} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3 max-sm:hidden  basis-1/2" src={m9} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3 max-sm:hidden  basis-1/2" src={m10} alt="m" />
         </div>
-        <div className="flex flex-row mx-14">
-          <Image className="basis-1/5 w-5 "  src={m11} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m12} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m13} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m14} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m15} alt="m" />
-          <Image className="basis-1/5 w-5 " src={m16} alt="m" />
+        <div className="flex flex-row md:mx-14 mx-2">
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2"  src={m11} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m12} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m13} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3  basis-1/2" src={m14} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3 max-sm:hidden  basis-1/2" src={m15} alt="m" />
+          <Image className="md:basis-1/5 md:w-5 w-3  max-sm:hidden basis-1/2" src={m16} alt="m" />
         </div>
         {/* <div className="flex flex-row mx-16"> */}
         {/* <Image className="basis-1/4 w-9 " src={m20} alt="m" />

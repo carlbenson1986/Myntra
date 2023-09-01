@@ -1,50 +1,51 @@
 export default function Navbar() {
     return (
-      <nav className="bg-white top-0  left-0 right-0 fixed z-50 p-4 flex justify-between items-center drop-shadow-md">
+      <nav className="bg-white 
+      top-0  left-0 right-0 fixed z-50 p-4 flex 
+      justify-between items-center drop-shadow-md">
         {/* Logo */}
         <div className="flex items-center ">
           <img
             src="https://ww1.freelogovectors.net/wp-content/uploads/2023/01/myntra-logo-freelogovectors.net_.png"
             alt=""
-            className="h-9 mx-5"
+            className="md:h-9 max-sm:h-8 max-sm:mr-1 md:mx-5"
           />
   
           {/* Menu Items */}
-          <ul className="flex space-x-6 ">
+          <ul className="flex md:space-x-6 max-sm:space-x-2">
             <li>
-              <a href="#" className="font-semibold text-sm">
+              <a href="#" className="font-semibold md:text-sm  max-sm:text-xs">
                 MEN
               </a>
             </li>
             <li>
-              <a href="#" className="font-semibold text-sm">
+              <a href="#" className="font-semibold md:text-sm   max-sm:text-xs">
                 WOMEN
               </a>
             </li>
             <li>
-              <a href="#" className="font-semibold text-sm">
-                KIDS{" "}
-              </a>
+              <a href="#" className="font-semibold md:text-sm   max-sm:text-xs">
+                  KIDS
+                </a>
             </li>
             <li>
-              <a href="#" className="font-semibold text-sm">
+              <a href="#" className="font-semibold max-sm:hidden text-sm">
                 HOME & LIVING
               </a>
             </li>
             <li>
-              <a href="#" className="font-semibold text-sm">
+              <a href="#" className="font-semibold  max-sm:text-xs md:text-sm">
                 BEAUTY
               </a>
             </li>
             <li>
-              <a href="#" className="font-semibold text-sm">
-                STUDIO
-              </a>
+              <a href="#" className="font-semibold  max-sm:text-xs text-sm ">
+                STUDIO</a>
             </li>
           </ul>
         </div>
         {/* Search Bar and Cart */}
-        <div className="flex items-center space-x-10">
+        <div className="flex items-center max-sm:hidden space-x-10">
           <input
             type="text"
             placeholder="Search for products,brands and more"
