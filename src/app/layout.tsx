@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   icons:{
-    icon:"https://ww1.freelogovectors.net/wp-content/uploads/2023/01/myntra-logo-freelogovectors.net_.png"
+    icon:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cnbctv18.com%2Fretail%2Fmyntra-changes-logo-after-complaint-calls-signage-offensive-to-women-8153851.htm&psig=AOvVaw0uhtbsfkfkIY9xjP4IoY1z&ust=1693643293097000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJi_4qr_iIEDFQAAAAAdAAAAABAJ"
   },
   title: 'Myntra',
   description: 'CAPSTONE PROJECT ',
