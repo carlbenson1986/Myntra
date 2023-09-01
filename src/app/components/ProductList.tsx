@@ -48,8 +48,8 @@ export default function ProductList() {
       <div className="grid grid-cols-4 border-y-2 w-full border-slate-100">
        
 
-        {dataP.map((product) => (
-          <Product p={product} />
+        {dataP.map((product ,index) => (
+          <Product p={product} key={index} />
         ))}
       </div>
     </div>
