@@ -13,8 +13,10 @@ import { Footer } from "./components/Footer";
 export default function Home() {
   // const router = useRouter();
   const  h= "medal worthy brands to bag";
+  
   return (
     <>
+    
       <Navbar />
       <ImageCaro />
       <AdsCaro heading={h}/>
