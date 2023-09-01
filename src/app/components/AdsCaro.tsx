@@ -64,24 +64,24 @@ function AdsCaro(props:any) {
         {props.heading}
       </h1>
       <Slider className="max-sm:m-3" {...settings} autoplay={true}>
-        <Image src={r0} alt="d" />
-        <Image src={r1} alt="d" />
-        <Image src={r2} alt="d" />
-        <Image src={r3} alt="d" />
-        <Image src={r4} alt="d" />
-        <Image src={r5} alt="d" />
-        <Image src={r6} alt="d" />
-        <Image src={r7} alt="d" />
-        <Image src={r8} alt="d" />
-        <Image src={r9} alt="d" />
-        <Image src={r10} alt="d" />
-        <Image src={r11} alt="d" />
-        <Image src={r12} alt="d" />
-        <Image src={r13} alt="d" />
-        <Image src={r14} alt="d" />
-        <Image src={r15} alt="d" />
-        <Image src={r16} alt="d" />
-        <Image src={r17} alt="d" />
+        <Image objectFit="contain" src={r0} alt="d" />
+        <Image objectFit="contain"  src={r1} alt="d" />
+        <Image src={r2} alt="d"  objectFit="contain" />
+        <Image src={r3} alt="d"  objectFit="contain" />
+        <Image src={r4} alt="d"  objectFit="contain" />
+        <Image src={r5} alt="d"  objectFit="contain" />
+        <Image src={r6} alt="d"  objectFit="contain" />
+        <Image src={r7} alt="d"  objectFit="contain" />
+        <Image src={r8} alt="d" objectFit="contain"  />
+        <Image src={r9} alt="d"  objectFit="contain" />
+        <Image src={r10} alt="d"  objectFit="contain" />
+        <Image src={r11} alt="d"  objectFit="contain" />
+        <Image src={r12} alt="d"  objectFit="contain" />
+        <Image src={r13} alt="d"  objectFit="contain" />
+        <Image src={r14} alt="d"  objectFit="contain" />
+        <Image src={r15} alt="d"  objectFit="contain" />
+        <Image src={r16} alt="d"  objectFit="contain" />
+        <Image src={r17} alt="d"  objectFit="contain" />
       </Slider>
     </div>
   );

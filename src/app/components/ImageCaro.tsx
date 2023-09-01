@@ -18,32 +18,32 @@ const ImageCaro = () => {
     <Carousel showThumbs={false} showArrows={false}   showStatus={false}
      autoPlay infiniteLoop className='relative md:mt-[7rem] max-sm:mt-[6rem]'>
       <div>
-       <Image src={m1} alt='handbags'/>
+       <Image  objectFit="contain"  src={m1} alt='handbags'/>
       </div>
       
       <div>
-       <Image src={m2} alt='handbags'/>
+       <Image  objectFit="contain"  src={m2} alt='handbags'/>
       </div>
       
       <div>
-       <Image src={m3} alt='handbags'/>
+       <Image  objectFit="contain"  src={m3} alt='handbags'/>
       </div>
       
       <div>
-       <Image src={m4} alt='handbags'/>
+       <Image  objectFit="contain"  src={m4} alt='handbags'/>
       </div>
       
       <div>
-       <Image src={m5} alt='handbags'/>
+       <Image  objectFit="contain"  src={m5} alt='handbags'/>
       </div>
       <div>
-       <Image src={m6} alt='handbags'/>
+       <Image  objectFit="contain"  src={m6} alt='handbags'/>
       </div>
       <div>
-       <Image src={m7} alt='handbags'/>
+       <Image  objectFit="contain"  src={m7} alt='handbags'/>
       </div>
       <div>
-       <Image src={m8} alt='handbags'/>
+       <Image  objectFit="contain"  src={m8} alt='handbags'/>
       </div>
       
      

@@ -55,12 +55,12 @@ function AdsSlider() {
       <Slider   className="max-sm:ml-3"
       {...settings} autoplay={true}
       >
-        <Image src={r1} alt="d"/>
-        <Image src={r2} alt="d"/>
-        <Image src={r3} alt="d"/>
-        <Image src={r4} alt="d"/>
+        <Image  objectFit="contain" src={r1} alt="d"/>
+        <Image src={r2} alt="d" objectFit="contain" />
+        <Image src={r3} alt="d" objectFit="contain" />
+        <Image src={r4} alt="d" objectFit="contain" />
         {/* <Image src={r5} alt="d"/> */}
-        <Image src={r6} alt="d"/>
+        <Image src={r6} alt="d" objectFit="contain" />
           
         </Slider>
     </div>

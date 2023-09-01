@@ -10,7 +10,7 @@ const Product = (product: any) => {
     <>
       <div className="max-w-lg hover:shadow-xl bg-white rounded-lg overflow-hidden m-4 item-container">
        
-        <Image
+        <Image  objectFit="contain" 
           width={200}
           height={300}
           src={product.p.imageUrl || <Skeleton count={1} baseColor="#074a66"/>}
