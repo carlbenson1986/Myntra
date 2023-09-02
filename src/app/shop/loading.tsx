@@ -176,6 +176,11 @@ export default function loading() {
               </div>
             </div>
           </div>
+
+
+
+
+          
           <div className="border-2 border-slate-100">
             <h3 className="uppercase font-semibold p-3">price</h3>
             <div className=" pl-4  pb-3">

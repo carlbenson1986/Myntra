@@ -4,6 +4,7 @@ import { AiOutlineHeart, AiOutlineUser, AiOutlineSearch } from "react-icons/ai";
 
 import { useEffect, useState } from "react";
 import dataP from "./data/data";
+import Profile from "./Profile";
 import SearchList from "./searchFun/SeachList";
 import Link from "next/link";
 
@@ -37,7 +38,7 @@ export default function Navbar() {
   return (
     <nav
       className="bg-white 
-      top-0  left-0 right-0 fixed z-50 p-4 flex 
+      top-0  left-0 right-0 fixed z-50 px-4 py-3 flex 
       justify-between items-center drop-shadow-md"
     >
       {/* Logo */}
@@ -123,12 +124,11 @@ export default function Navbar() {
           )}
         </div>
 
-        <a href="#" className="text-xs ">
+         <a href="#" className="text-xs "> 
           <div className="text-center text-stone-600 pl-2 text-xl ">
-            <AiOutlineUser />
+            <Profile/>
           </div>
-          <span>Profile</span>
-        </a>
+        </a> 
         <a href="#" className="text-xs ">
           <div className="text-center text-stone-600 pl-2 text-xl ">
             <AiOutlineHeart />
