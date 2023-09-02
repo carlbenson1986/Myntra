@@ -1,22 +1,63 @@
 "use client";
-import React from "react";
-// import dataP from "./data";
+import React, { useState } from "react";
 import Image from "next/image";
+import { BsBag ,BsFillBagCheckFill} from "react-icons/bs";
+
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 const Product = (product: any) => {
-  
+  const [hovered, setHovered] = useState(false);
+  const [added, setAdded] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
+  const handleClick = () => {
+    setAdded(true);
+  };
   return (
     <>
-      <div className="max-w-lg hover:shadow-xl bg-white rounded-lg overflow-hidden m-4 item-container">
-        <Image
-          objectFit="contain"
-          width={200}
-          height={300}
-          src={product.p.imageUrl || <Skeleton count={1} baseColor="#074a66" />}
-          alt="i"
-          className="h-40 my-6  object-cover"
-        />
+      <div className="max-w-lg hover:shadow-xl bg-white rounded-xl overflow-hidden m-4 item-container">
+        <div
+          className="relative rounded-xl"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Image
+            objectFit="contain"
+            width={200}
+            height={300}
+            src={
+              product.p.imageUrl || <Skeleton count={1} baseColor="#074a66" />
+            }
+            alt="i"
+            className="h-40 my-6 rounded-xl object-cover"
+          />
+          {hovered && (
+            <div className="absolute rounded-xl inset-0 flex items-center justify-center bg-black bg-opacity-50">
+              {!added ? (
+                <button
+                  onClick={handleClick}
+                  className={`bg-white text-black text-xl px-4 py-2 rounded ${
+                    added ? "transform scale-105" : ""
+                  }`}
+                >
+                  {/* {added ? <BsBag/> : "Add to Bag"} */}
+                  <BsBag/>
+                </button>
+              ) : (
+                <button className="bg-white text-2xl text-black px-4 py-2 rounded">
+                  <BsFillBagCheckFill />
+                </button>
+              )}
+            </div>
+          )}
+        </div>
         <div className="px-4 py-2">
           <div className="text-gray-900 font-semibold text-lg">
             {product.p.name}
@@ -43,13 +84,13 @@ const Product = (product: any) => {
     </>
   );
 };
-export default function ProductList(data:any) {
-  console
-  
+export default function ProductList(data: any) {
+  console;
+
   return (
     <div className="flex-none px-8 hover:shadow-2xl">
       <div className="grid grid-cols-4 border-y-2 w-full border-slate-100">
-        {data.data.map((product:any, index:any) => (
+        {data.data.map((product: any, index: any) => (
           <Product p={product} key={index} />
         ))}
       </div>
