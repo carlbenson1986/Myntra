@@ -2,10 +2,14 @@ import React from 'react'
 
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import Navbar from './components/Navbar'
+import ImageCaro from './components/ImageCaro'
 export default function loading() {
   return (
-    <div className='text-center flex justify-center text-6xl mx-10'>
-        <Skeleton baseColor='#074a66'/>
+    <div className=''>
+       <Navbar/>
+       <ImageCaro/>
+       
     </div>
   )
 }
