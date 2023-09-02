@@ -1,9 +1,13 @@
 import React from "react";
 import { nanoid } from "nanoid";
 import AddToBagButton from "./AddToBag";
+import { useDispatch } from "react-redux";
+import { AppDispatch, useAppSelector } from "@/redux/store";
+import { addToBag } from "@/redux/features/manageBag";
 
 export default function SearchList(data) {
   const sortedProducts = [];
+  const currentItem = [];
 
   Object.entries(data.data).forEach(([key, value]) => {
     const product = {
@@ -17,18 +21,24 @@ export default function SearchList(data) {
 
   const id = nanoid(20);
 
+  const dispatch = useDispatch();
+
+  const addItem = (item) => {
+      dispatch(addToBag(item));
+    
+  };
+
   return (
     <div className="h-screen overflow-y-scroll">
       {/* ^ Apply this class to enable vertical scrolling */}
       {sortedProducts && (
         <div>
-          <ul>
+          <div>
             {sortedProducts.map((item) => (
-              <li
+              <div
                 className="flex rounded-md items-center mb-4 border-2 hover:shadow-xl "
-                key={id}
+              
               >
-                  
                 <img
                   src={item.imageUrl}
                   alt={item.name}
@@ -38,25 +48,14 @@ export default function SearchList(data) {
                   <p className="text-lg font-semibold">{item.name}</p>
                   <p className="text-gray-500">${item.price}</p>
                 </div>
-                {/* <button className=
-                "bg-blue-500 
-                hover:bg-blue-600 
-                ml-6 
-                active:bg-blue-700
-                 text-white font-semibold 
-                py-2 px-3 
-                text-sm
-                 rounded-full 
-                shadow-md transform 
-                transition-transform 
-                hover:scale-105
-                 focus:outline-none">
-                  Add to Bag
-                </button> */}
-                <AddToBagButton/>
-              </li>
+
+                <div onClick={()=>addItem(item)}>
+                  {/* {currentItem.push(item)} */}
+                  <AddToBagButton />
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>

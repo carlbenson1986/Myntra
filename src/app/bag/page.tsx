@@ -1,6 +1,7 @@
 import React from "react";
+import { AppDispatch, useAppSelector } from "@/redux/store";
+import BagItems from "../components/bag/BagItems";
 import Navbar from "../components/Navbar";
-import CartItem from "./CartItem";
 
 export default function page() {
   const cartItems = [
@@ -9,7 +10,8 @@ export default function page() {
   ];
 
   const total = cartItems.reduce((acc, item) => acc + item.subtotal, 0);
-
+    // console.log(items);
+    
   return (
     <div>
       <Navbar />
@@ -17,11 +19,7 @@ export default function page() {
         <h1 className="text-2xl font-bold mb-4">Your Shopping Cart</h1>
 
         {/* Add a container for the cart items */}
-        <div className="bg-white border rounded-lg shadow-md p-4 mb-4">
-          {cartItems.map((item, index) => (
-            <CartItem key={index} {...item} />
-          ))}
-        </div>
+        <BagItems/>
 
         {/* Add a container for the total and "Proceed to Buy" button */}
         <div className="bg-white border rounded-lg shadow-md p-4">
@@ -46,15 +44,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <script
-        type="module"
-        src="node_modules/@material-tailwind/html@latest/scripts/popover.js"
-      ></script>
-
-      <script
-        type="module"
-        src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"
-      ></script>
+      
     </div>
   );
 }

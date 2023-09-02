@@ -1,25 +1,38 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { BsBag ,BsFillBagCheckFill} from "react-icons/bs";
+import { BsBag, BsFillBagCheckFill } from "react-icons/bs";
+import { addToBag, removeFromBag } from "./../../redux/features/manageBag";
+import { useDispatch } from "react-redux";
+import { AppDispatch, useAppSelector } from "@/redux/store";
+import { ReduxProvider } from "@/redux/provider";
 
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+
 const Product = (product: any) => {
   const [hovered, setHovered] = useState(false);
   const [added, setAdded] = useState(false);
+  const [item, setItem] = useState({});
 
   const handleMouseEnter = () => {
     setHovered(true);
   };
-
   const handleMouseLeave = () => {
     setHovered(false);
   };
 
-  const handleClick = () => {
+  // redux updatae
+  const dispatch = useDispatch<AppDispatch>();
+
+  // get data
+  const dataFromBag = useAppSelector((state) => state.reducers.bag);
+
+  const handleClick = (e: any) => {
     setAdded(true);
+    dispatch(addToBag(product));
   };
+
   return (
     <>
       <div className="max-w-lg hover:shadow-xl bg-white rounded-xl overflow-hidden m-4 item-container">
@@ -47,8 +60,7 @@ const Product = (product: any) => {
                     added ? "transform scale-105" : ""
                   }`}
                 >
-                  {/* {added ? <BsBag/> : "Add to Bag"} */}
-                  <BsBag/>
+                  <BsBag />
                 </button>
               ) : (
                 <button className="bg-white text-2xl text-black px-4 py-2 rounded">
@@ -85,15 +97,15 @@ const Product = (product: any) => {
   );
 };
 export default function ProductList(data: any) {
-  console;
-
   return (
     <div className="flex-none px-8 hover:shadow-2xl">
-      <div className="grid grid-cols-4 border-y-2 w-full border-slate-100">
-        {data.data.map((product: any, index: any) => (
-          <Product p={product} key={index} />
-        ))}
-      </div>
+      <ReduxProvider>
+        <div className="grid grid-cols-4 border-y-2 w-full border-slate-100">
+          {data.data.map((product: any, index: any) => (
+            <Product p={product} key={index} />
+          ))}
+        </div>
+      </ReduxProvider>
     </div>
   );
 }

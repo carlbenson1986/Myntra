@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <nav
       className="bg-white 
-      top-0  left-0 right-0 fixed z-50 px-4 py-3 flex 
+      top-0  left-0 right-0 fixed z-50 p-4 flex 
       justify-between items-center drop-shadow-md"
     >
       {/* Logo */}
@@ -53,20 +53,20 @@ export default function Navbar() {
         {/* Menu Items */}
         <ul className="flex md:space-x-6 max-sm:space-x-2">
           <li>
-            <a
+            <Link
               href="/shop"
               className="font-semibold md:text-sm  max-sm:text-xs"
             >
               MEN
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/shop"
               className="font-semibold md:text-sm   max-sm:text-xs"
             >
               WOMEN
-            </a>
+            </Link>
           </li>
           <li>
             <Link
@@ -124,11 +124,11 @@ export default function Navbar() {
           )}
         </div>
 
-         <a href="#" className="text-xs "> 
+         {/* <a href="#" className="text-xs ">  */}
           <div className="text-center text-stone-600 pl-2 text-xl ">
             <Profile/>
           </div>
-        </a> 
+        {/* </a>  */}
         <a href="#" className="text-xs ">
           <div className="text-center text-stone-600 pl-2 text-xl ">
             <AiOutlineHeart />
