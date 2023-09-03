@@ -1,23 +1,21 @@
 "use client";
-import ImageCaro from "./components/HomePage/ImageCaro";
+import ImageCaro from "./components/HomePage/ImageBasedCarousel/ImageCaro";
 import Navbar from "./components/Navbar/Navbar";
-import Cards from "./components/HomePage/Cards";
-import AdsSlider from "@/app/components/HomePage/AdsSlider";
-import AdsCaro from "@/app/components/HomePage/AdsCaro";
-import { Footer } from "./components/HomePage/Footer";
+import Cards from "./components/HomePage/ImageBasedCarousel/Cards";
+import AdsSlider from "@/app/components/HomePage/ImageBasedCarousel/AdsSlider";
+import AdsCaro from "@/app/components/HomePage/ImageBasedCarousel/AdsCaro";
+import { Footer } from "./components/HomePage/Footer/Footer";
 
 
 
 export default function Home() {
-  // const router = useRouter();
-  const  h= "medal worthy brands to bag";
 
   return (
     <>
     
       <Navbar />
       <ImageCaro />
-      <AdsCaro heading={h}/>
+      <AdsCaro heading={"medal worthy brands to bag"}/>
       <AdsSlider/>
       <Cards/>
       <Footer />

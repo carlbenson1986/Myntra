@@ -1,24 +1,24 @@
 import Image from "next/image";
 import React from "react";
-import m1 from "./../../../../public/img/cards/k22.jpg";
-import m2 from "./../../../../public/img/cards/k21.jpg";
-import m28 from "./../../../../public/img/cards/k20.jpg";
-import m3 from "./../../../../public/img/cards/k19.jpg";
-import m38 from "./../../../../public/img/cards/k18.jpg";
-import m4 from "./../../../../public/img/cards/k17.jpg";
-import m5 from "./../../../../public/img/cards/k16.jpg";
-import m6 from "./../../../../public/img/cards/k15.jpg";
-import m7 from "./../../../../public/img/cards/k14.jpg";
-import m8 from "./../../../../public/img/cards/k13.jpg";
-import m9 from "./../../../../public/img/cards/k12.jpg";
-import m10 from "./../../../../public/img/cards/k11.jpg";
-import m11 from "./../../../../public/img/cards/k10.jpg";
-import m12 from "./../../../../public/img/cards/k9.jpg";
-import m13 from "./../../../../public/img/cards/k8.jpg";
-import m14 from "./../../../../public/img/cards/k6.jpg";
+import m1 from "./../../../../../public/img/cards/k22.jpg";
+import m2 from "./../../../../../public/img/cards/k21.jpg";
+import m28 from "./../../../../../public/img/cards/k20.jpg";
+import m3 from "./../../../../../public/img/cards/k19.jpg";
+import m38 from "./../../../../../public/img/cards/k18.jpg";
+import m4 from "./../../../../../public/img/cards/k17.jpg";
+import m5 from "./../../../../../public/img/cards/k16.jpg";
+import m6 from "./../../../../../public/img/cards/k15.jpg";
+import m7 from "./../../../../../public/img/cards/k14.jpg";
+import m8 from "./../../../../../public/img/cards/k13.jpg";
+import m9 from "./../../../../../public/img/cards/k12.jpg";
+import m10 from "./../../../../../public/img/cards/k11.jpg";
+import m11 from "./../../../../../public/img/cards/k10.jpg";
+import m12 from "./../../../../../public/img/cards/k9.jpg";
+import m13 from "./../../../../../public/img/cards/k8.jpg";
+import m14 from "./../../../../../public/img/cards/k6.jpg";
 
-import m15 from "./../../../../public/img/cards/k5.jpg";
-import m16 from "./../../../../public/img/cards/k4.jpg";
+import m15 from "./../../../../../public/img/cards/k5.jpg";
+import m16 from "./../../../../../public/img/cards/k4.jpg";
 
 function Cards() {
   return (
