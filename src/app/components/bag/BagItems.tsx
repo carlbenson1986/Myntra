@@ -4,13 +4,17 @@ import React from "react";
 import { removeFromBag, removePrice } from "@/redux/features/manageBag";
 import { AiFillDelete } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { nanoid } from "nanoid";
+
+interface Item {
+  imageUrl: string;
+  name: string;
+  price: number;
+}
 
 function BagItems() {
-  const id = nanoid();
   const items = useAppSelector((state) => state.reducers.bag);
   const dispatch = useDispatch();
-  const removePriceAndBag = (item: any) => {
+  const removePriceAndBag = (item: Item) => {
     if (Object.keys(item).length === 0) {
       return;
     }
@@ -20,10 +24,13 @@ function BagItems() {
     console.log(item);
   };
 
+  Object.entries(items).map(([itemId, item]) => {
+    // console.log(item.name);
+  });
   return (
     <div className="bg-white border rounded-lg shadow-md overflow-scroll h-72 p-4 mb-4">
-      {Object.entries(items).map((item) => (
-        <div className="flex justify-between items-center my-4" key={id}>
+      {Object.entries(items).map((item: any) => (
+        <div className="flex justify-between items-center my-4" key={item[0]}>
           {item.length && (
             <div className="flex items-center  w-64 flex-none">
               <img
