@@ -15,6 +15,7 @@ function BagItems() {
   const items = useAppSelector((state) => state.reducers.bag);
   const dispatch = useDispatch();
   const removePriceAndBag = (item: Item) => {
+    
     if (Object.keys(item).length === 0) {
       return;
     }

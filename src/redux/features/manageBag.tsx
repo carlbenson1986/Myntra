@@ -21,7 +21,7 @@ export const slice = createSlice({
       state.bag.push(action.payload);
     },
     removeFromBag: (state, action) => {
-        const index = state.bag.findIndex((item) => item.name === action.payload.name);
+        const index = state.bag.findIndex((item:any) => item === action.payload.name);
 
         state.bag.splice(index, 1);
     },
