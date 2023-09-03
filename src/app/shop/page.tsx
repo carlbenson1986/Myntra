@@ -10,9 +10,11 @@ export default function page() {
   return (
     <div>
       <Navbar />
-      <div className="mt-32 flex">
-        <h1 className="font-bold p-2 mr-32 ml-3 mb-1">FILTERS</h1>
 
+      <div className="mt-32 flex">
+        {/* heading of filt */}
+        <h1 className="font-bold p-2 mr-32 ml-3 mb-1">FILTERS</h1>
+        {/* brief info for products */}
         <div className="flex  ">
           <div className="flex flex-row sm:mr-56 sm:ml-5">
             <h2 className="font-light py-2 px-4 flex text-sm">
@@ -43,10 +45,12 @@ export default function page() {
           </div>
         </div>
       </div>
+
       <div className="flex">
         <Filters />
-        <ProductList data={dataP}/>
+        <ProductList data={dataP} />
       </div>
+
       <Footer />
     </div>
   );

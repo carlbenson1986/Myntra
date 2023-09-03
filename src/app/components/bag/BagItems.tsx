@@ -1,16 +1,29 @@
 "use client";
 import { useAppSelector } from "@/redux/store";
 import React from "react";
+import { removeFromBag, removePrice } from "@/redux/features/manageBag";
 import { AiFillDelete } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { nanoid } from "nanoid";
 
 function BagItems() {
+  const id = nanoid();
   const items = useAppSelector((state) => state.reducers.bag);
-  const removePriceAndBag=()=>{}
+  const dispatch = useDispatch();
+  const removePriceAndBag = (item: any) => {
+    if (Object.keys(item).length === 0) {
+      return;
+    }
+    dispatch(removeFromBag(item));
+
+    dispatch(removePrice(item.price));
+    console.log(item);
+  };
 
   return (
     <div className="bg-white border rounded-lg shadow-md overflow-scroll h-72 p-4 mb-4">
       {Object.entries(items).map((item) => (
-        <div className="flex justify-between items-center my-4">
+        <div className="flex justify-between items-center my-4" key={id}>
           {item.length && (
             <div className="flex items-center  w-64 flex-none">
               <img
@@ -23,10 +36,15 @@ function BagItems() {
                 <p className="text-gray-500">${item[1].price}</p>
               </div>
               <div className="ml-36">
-              <button type="button" onClick={removePriceAndBag} className="text-white bg-red-700 hover:bg-red-800 focus:outline-none text-xl
+                <button
+                  type="button"
+                  onClick={() => removePriceAndBag(item[1])}
+                  className="text-white bg-red-700 hover:bg-red-800 focus:outline-none text-xl
               focus:ring-4 focus:ring-red-300 font-medium rounded-full  px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600
-               dark:hover:bg-red-700 dark:focus:ring-red-900"><AiFillDelete></AiFillDelete></button>
-
+               dark:hover:bg-red-700 dark:focus:ring-red-900"
+                >
+                  <AiFillDelete></AiFillDelete>
+                </button>
               </div>
             </div>
           )}

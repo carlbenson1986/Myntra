@@ -35,7 +35,7 @@ export default function SearchList(data) {
         <div>
           <div>
             {sortedProducts.map((item) => (
-              <div className="flex rounded-md items-center mb-4 border-2 hover:shadow-xl ">
+              <div className="flex rounded-md items-center mb-4 border-2 hover:shadow-xl " key={id}>
                 <img
                   src={item.imageUrl}
                   alt={item.name}
