@@ -2,8 +2,7 @@ import React from "react";
 import { nanoid } from "nanoid";
 import AddToBagButton from "./AddToBag";
 import { useDispatch } from "react-redux";
-import { AppDispatch, useAppSelector } from "@/redux/store";
-import { addToBag } from "@/redux/features/manageBag";
+import { addToBag , addPrice} from "@/redux/features/manageBag";
 
 export default function SearchList(data) {
   const sortedProducts = [];
@@ -22,23 +21,21 @@ export default function SearchList(data) {
   const id = nanoid(20);
 
   const dispatch = useDispatch();
-
+  
   const addItem = (item) => {
-      dispatch(addToBag(item));
-    
+    dispatch(addPrice(item.price));
+    dispatch(addToBag(item));
   };
 
   return (
     <div className="h-screen overflow-y-scroll">
       {/* ^ Apply this class to enable vertical scrolling */}
+
       {sortedProducts && (
         <div>
           <div>
             {sortedProducts.map((item) => (
-              <div
-                className="flex rounded-md items-center mb-4 border-2 hover:shadow-xl "
-              
-              >
+              <div className="flex rounded-md items-center mb-4 border-2 hover:shadow-xl ">
                 <img
                   src={item.imageUrl}
                   alt={item.name}
@@ -49,8 +46,8 @@ export default function SearchList(data) {
                   <p className="text-gray-500">${item.price}</p>
                 </div>
 
-                <div onClick={()=>addItem(item)}>
-                  {/* {currentItem.push(item)} */}
+                <div onClick={() => addItem(item)}>
+                  <div className="hidden">{currentItem.push(item)}</div>
                   <AddToBagButton />
                 </div>
               </div>

@@ -1,9 +1,9 @@
 import React from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import Navbar from "../components/Navbar";
-import Filters from "../components/Filters";
-import ProductList from "../components/ProductList";
-import { Footer } from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import Filters from "./Filters";
+import ProductList from "./ProductList";
+import { Footer } from "../components/HomePage/Footer";
 import Skeleton from "react-loading-skeleton";
 import dataP from "../components/data/data";
 

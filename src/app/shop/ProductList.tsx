@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { BsBag, BsFillBagCheckFill } from "react-icons/bs";
-import { addToBag, removeFromBag } from "./../../redux/features/manageBag";
+import { addPrice, addToBag, removeFromBag } from "../../redux/features/manageBag";
 import { useDispatch } from "react-redux";
 import { AppDispatch, useAppSelector } from "@/redux/store";
 import { ReduxProvider } from "@/redux/provider";
@@ -30,7 +30,8 @@ const Product = (product: any) => {
 
   const handleClick = (e: any) => {
     setAdded(true);
-    dispatch(addToBag(product));
+    dispatch(addPrice(product.p.price));
+    dispatch(addToBag(product.p));
   };
 
   return (

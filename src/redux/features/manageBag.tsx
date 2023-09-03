@@ -1,11 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { ACTION } from "next/dist/client/components/app-router-headers";
 
 type BagState={
     bag:Array<Object>;
+    totalAmount:number;
 }
 
 const initialState ={
     bag:[{}],
+    totalAmount:0
 }as BagState;
 
 export const slice = createSlice({
@@ -22,10 +25,14 @@ export const slice = createSlice({
             state.bag = state.bag.filter((item)=>{
                 item !== action.payload
             })
+        },
+        addPrice:(state,action)=>{
+            state.totalAmount += action.payload;
         }
+
     }
 })
 
-export const {addToBag,removeFromBag,emptyBag} = slice.actions
+export const {addToBag,removeFromBag,addPrice,emptyBag} = slice.actions
 export default slice.reducer;
 

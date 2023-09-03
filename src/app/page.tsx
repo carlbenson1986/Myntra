@@ -1,21 +1,16 @@
 "use client";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import ImageCaro from "./components/ImageCaro";
-import Navbar from "./components/Navbar";
-import Cards from "./components/Cards";
-import AdsSlider from "./components/AdsSlider";
-import AdsCaro from "./components/AdsCaro";
-import { Footer } from "./components/Footer";
-import {useSelector} from "react-redux";
+import ImageCaro from "./components/HomePage/ImageCaro";
+import Navbar from "./components/Navbar/Navbar";
+import Cards from "./components/HomePage/Cards";
+import AdsSlider from "@/app/components/HomePage/AdsSlider";
+import AdsCaro from "@/app/components/HomePage/AdsCaro";
+import { Footer } from "./components/HomePage/Footer";
 
 
 
 export default function Home() {
   // const router = useRouter();
   const  h= "medal worthy brands to bag";
-      const items = useSelector((state:any) => state.bag);
-console.log(items);
 
   return (
     <>
