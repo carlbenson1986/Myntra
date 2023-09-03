@@ -15,9 +15,7 @@ export default function SearchList(data:any) {
     dispatch(addPrice(item.price));
     dispatch(addToBag(item));
   };
-  {
-    Object.entries(data.data).map(item=>{console.log(item);})
-  }
+  
   return (
     <div className="h-screen overflow-y-scroll">
         {

@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar/Navbar";
 import TotalAmount from "../components/bag/TotalAmount";
 
 export default function page() {
-  // console.log(items);
+
 
   return (
     <div>

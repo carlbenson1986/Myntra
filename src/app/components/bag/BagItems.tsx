@@ -15,19 +15,16 @@ function BagItems() {
   const items = useAppSelector((state) => state.reducers.bag);
   const dispatch = useDispatch();
   const removePriceAndBag = (item: Item) => {
-    
+
     if (Object.keys(item).length === 0) {
       return;
     }
     dispatch(removeFromBag(item));
 
     dispatch(removePrice(item.price));
-    console.log(item);
   };
 
-  Object.entries(items).map(([itemId, item]) => {
-    // console.log(item.name);
-  });
+
   return (
     <div className="bg-white border rounded-lg shadow-md overflow-scroll h-72 p-4 mb-4">
       {Object.entries(items).map((item: any) => (
