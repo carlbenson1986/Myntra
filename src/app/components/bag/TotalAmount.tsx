@@ -1,11 +1,9 @@
 "use client";
 import { useAppSelector } from "@/redux/store";
-import { Button } from "@material-tailwind/react";
 
 import React, { useState } from "react";
 
 function TotalAmount() {
-  // const [amount, setAmount] = useState(0);
 
   let amount = 0;
   amount = useAppSelector((state) => state.reducers.totalAmount);

@@ -6,7 +6,6 @@ import {
   Avatar,
   Typography,
 } from "@material-tailwind/react";
-import { AiOutlineUser } from "react-icons/ai";
 
 export default function Profile() {
   return (
@@ -17,9 +16,8 @@ export default function Profile() {
             alt="tania andrew"
             className="cursor-pointer"
             size="sm"
-            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+            src="https://images.immediate.co.uk/production/volatile/sites/3/2023/03/Jujutsu-Kaisen-Cropped-dbe733b.jpg?quality=90&resize=844,563"
           />
-        {/* <AiOutlineUser className={"cursor-pointer"} /> */}
       </MenuHandler>
       <MenuList className="mt-1 z-50">
         <MenuItem className="flex items-center gap-2">

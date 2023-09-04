@@ -21,17 +21,19 @@ export const slice = createSlice({
       state.bag.push(action.payload);
     },
     removeFromBag: (state, action) => {
-        const index = state.bag.findIndex((item:any) => item === action.payload.name);
+      const index = state.bag.findIndex(
+        (item: any) => item === action.payload.name
+      );
 
-        state.bag.splice(index, 1);
+      state.bag.splice(index, 1);
     },
     addPrice: (state, action) => {
+      console.log(state.totalAmount);
       state.totalAmount += action.payload;
     },
     removePrice: (state, action) => {
-      // if(action.payload = NaN) {
-      //   state.totalAmount = 0;
-      //   return}
+      console.log(state.totalAmount);
+      
       state.totalAmount -= action.payload;
     },
   },
