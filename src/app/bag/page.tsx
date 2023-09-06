@@ -9,7 +9,7 @@ export default function page() {
 
   return (
     <div>
-      <Navbar />
+     
       <div className="container mx-auto mt-24 p-4">
         <h1 className="text-2xl font-bold mb-4">Your Shopping Cart</h1>
 

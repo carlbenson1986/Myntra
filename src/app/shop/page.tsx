@@ -9,7 +9,7 @@ import dataP from "../components/data/data";
 export default function page() {
   return (
     <div>
-      <Navbar />
+     
 
       <div className="mt-32 flex">
         {/* heading of filt */}
